@@ -3,8 +3,95 @@
   padding: 0;
   min-width: 0;
 }
+body {
+  background-color: white;
+}
+p { font-size: 1.3em; }
+
+
+/* HEADER */
 
 header {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+header button,
+header a,
+header input {
+  border: none;
+  border-radius: 7px;
+  &:hover {
+    background-color: rgba(0,0,0,0.5) 
+  }
+}
+
+header button {
+  box-sizing: border-box;
+  height: 50px;
+  min-width: 50px;
+  padding: 0 8px;
+  background: none;
+  p {
+    font-weight: bold; 
+  }
+}
+
+header input {
+  box-sizing: border-box;
+  height: 50px;
+  padding: 5px;
+  margin: 0 4px;
+}
+
+nav {
+  box-sizing: content-box;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 5px;
+}
+
+nav a svg{
+  box-sizing: border-box;
+  height: 50px;
+  padding: 10px;
+}
+
+nav .has-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .subnav {
+  display: flex;
+  flex-direction: row;
+  &:first-of-type {
+    flex-grow: 1;
+    flex-basis: 0;
+    & > * {
+      margin: 0 4px;
+    }
+  }
+  &:last-of-type button {
+    border-radius: 100%;
+    &:last-of-type {
+      background-image: url("./images/user.png");
+    }
+  }
+}
+
+nav #profile-pic svg {
+  background-color: white;
+  padding: 5px;
+  border-radius: 100%;
+}
+
+
+
+
+
+/* header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,4 +155,4 @@ header .searchbar {
   button:active {
     background-color: rgba(0,0,0,0.2);
   }
-}
+} */
