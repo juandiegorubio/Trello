@@ -38,9 +38,13 @@ header button {
 
 header input {
   box-sizing: border-box;
+  min-width: 250px;
   height: 50px;
   padding: 5px;
   margin: 0 4px;
+  &:hover {
+    background-color: rgba(0,0,0,0.2);
+  }
 }
 
 nav {
