@@ -16,7 +16,7 @@ header {
   border: 1px solid grey;
 }
 
-header button,
+button,
 header a,
 header input {
   border: none;
@@ -26,13 +26,13 @@ header input {
   }
 }
 
-header button {
+button {
   box-sizing: border-box;
   height: 100%;
   min-width: 50px;
-  padding: 0 15px;
   background: none;
   p {
+    padding: 0 15px;
     font-weight: bold; 
   }
 }
@@ -109,7 +109,7 @@ main .lateralnav {
 
 main .board {
   width: 100%;
-  height: calc(100dvh - );
+  height: 100%;
   /* background-color: aquamarine; */
   background-image: url(./images/wallpaper-board.jpg);
   background-repeat: no-repeat;
@@ -133,11 +133,11 @@ main header {
 }
 
 .content .list {
-  width: 250px;
+  width: 300px;
   height: 100%;
   background-color: rgb(240,240,240);
   border-radius: 15px;
-  padding: 0px 30px;
+  padding: 0px 10px;
   h3 {
     margin: 25px 0px;;
   }
@@ -151,13 +151,29 @@ main header {
 }
 
 .content .card {
+  box-sizing: border-box;
   width: 100%;
   height: 150px;
+  padding: 10px 10px;
   background-color: white;
+  border-radius: 15px;
   border: 1px solid rgb(200,200,200);
 
   &:hover, &:focus, &:active {
     border-color: rgb(0, 85, 255);
+  }
+
+  .top {
+    display: flex;
+    /* padding: 5px 0px; */
+    .card-title {
+      all: unset;
+      /* margin: 0 5px; */
+      flex: 1 0 0;
+      &:hover {
+        border: 1px solid grey;
+      }
+    }
   }
 }
 
@@ -166,5 +182,13 @@ main header {
   width: 100%;
   display: flex;
   flex-direction: row;
-
+  button {
+    padding: 0;
+  }
+  #addNewCard {
+    flex: 1 0 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
