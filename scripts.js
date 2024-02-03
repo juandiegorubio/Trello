@@ -64,7 +64,7 @@ let inputs = document.getElementsByTagName('input');
 for (let input of inputs) {
   input.addEventListener('keypress', (event) => {
     if (event.key === "Enter") {
-      console.log("Stop input");
+      event.target.blur();
     }
   });
 }
